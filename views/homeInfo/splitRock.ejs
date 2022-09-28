@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Split Rock Rehabilitation & Health Care Center</title>
+
+    <link rel="stylesheet" href="/assets/css/homeStyle.css">
+</head>
+<body>
+
+           <!-- Displaying the name of the home for this specific page -->
+           <% for (let i=0; i<homes.length; i++){%>
+            <% if (homes[i].name == 'Split Rock Rehabilitation & Health Care Center'){%>
+                <h1 class="splitRock-heading"><%= homes[i].name %></h1>
+            <%}%>
+        <%}%>
+    
+        <!-- Displaying the bainbridge home address -->
+        <% for (let i=0; i<homes.length; i++){%>
+            <% if (homes[i].address == '3525 Baychester Ave., Bronx, NY 10466'){%>
+                <h2><%= homes[i].address %></h2>
+            <%}%>
+        <%}%>
+    
+        <!-- Displaying the nursing home's phone number -->
+        <% for (let i=0; i<homes.length; i++){%>
+            <% if (homes[i].phoneNumber == '718-798-8900'){%>
+                <h2><%= homes[i].phoneNumber %></h2>
+            <%}%>
+        <%}%>
+        
+    
+        <!-- Displaying the nursing home's website -->
+        <% for (let i=0; i<homes.length; i++){%>
+            <% if (homes[i].website == 'splitrockrehab.com'){%>
+                <a href="https://splitrockrehab.com">Website</a>
+                
+            <%}%>
+        <%}%>
+</body>
+</html>

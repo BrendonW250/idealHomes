@@ -20,7 +20,7 @@ module.exports = {
   },
   getPost: async (req, res) => {
     try {
-      const post = await Post.findById(req.params.id);
+      const post = await Post.findById(req.params.id); //This is the method I would use to get the id of the home the user liked I THINK*****
       res.render("post.ejs", { post: post, user: req.user });
     } catch (err) {
       console.log(err);
