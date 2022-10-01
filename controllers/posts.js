@@ -1,6 +1,6 @@
 const cloudinary = require("../middleware/cloudinary");
 const Post = require("../models/Post");
-const Homes = require('../models/UserHomes')
+
 
 module.exports = {
   getProfile: async (req, res) => {
@@ -12,14 +12,7 @@ module.exports = {
     }
   },
   // getting the homes that the user liked
-  getHomes: async (req, res) => {
-    try{
-      const homes = await Homes.findById(req.params.id)
-      res.render('home.ejs', { homes: homes, user: req.user })
-    }catch (err){
-      console.log(err)
-    }
-  },
+  
   getFeed: async (req, res) => {
     try {
       const posts = await Post.find().sort({ createdAt: "desc" }).lean();
