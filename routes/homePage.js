@@ -9,6 +9,7 @@ const { ensureAuth, ensureGuest } = require("../middleware/auth");
 // routes for the individual pages of nursing homes )
 router.get('/home', ensureAuth, nursingHomesController.getHomes)
 
+
 //Main Routes - simplified for now
 // router.get("/", homeController.getIndex);
 // router.get("/profile", ensureAuth, postsController.getProfile);
