@@ -1,126 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <title>idealHome</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div class="relative overflow-hidden bg-white">
-        <div class="mx-auto max-w-7xl">
-          <div class="relative z-10 bg-white pb-8 sm:pb-16 md:pb-20 lg:w-full lg:max-w-2xl lg:pb-28 xl:pb-32">
-            <svg class="absolute inset-y-0 right-0 hidden h-full w-48 translate-x-1/2 transform text-white lg:block" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-              <polygon points="50,0 100,0 50,100 0,100" />
-            </svg>
-      
-            <div>
-              <div class="relative px-4 pt-6 sm:px-6 lg:px-8">
-                <nav class="relative flex items-center justify-between sm:h-10 lg:justify-start" aria-label="Global">
-                  <div class="flex flex-shrink-0 flex-grow items-center lg:flex-grow-0">
-                    <div class="flex w-full items-center justify-between md:w-auto">
-                      <a href="#">
-                        <span class="sr-only">Your Company</span>
-                        <img alt="Your Company" class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600">
-                      </a>
-                      <div class="-mr-2 flex items-center md:hidden">
-                        <button type="button" class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
-                          <span class="sr-only">Open main menu</span>
-                          <!-- Heroicon name: outline/bars-3 -->
-                          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="hidden md:ml-10 md:block md:space-x-8 md:pr-4">
-                    <a href="#" class="font-medium text-gray-500 hover:text-gray-900">Product</a>
-      
-                    <a href="#" class="font-medium text-gray-500 hover:text-gray-900">Features</a>
-      
-                    <a href="#" class="font-medium text-gray-500 hover:text-gray-900">Marketplace</a>
-      
-                    <a href="#" class="font-medium text-gray-500 hover:text-gray-900">Company</a>
-      
-                    <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">Log in</a>
-                  </div>
-                </nav>
-              </div>
-      
-              <!--
-                Mobile menu, show/hide based on menu open state.
-      
-                Entering: "duration-150 ease-out"
-                  From: "opacity-0 scale-95"
-                  To: "opacity-100 scale-100"
-                Leaving: "duration-100 ease-in"
-                  From: "opacity-100 scale-100"
-                  To: "opacity-0 scale-95"
-              -->
-              <div class="absolute inset-x-0 top-0 z-10 origin-top-right transform p-2 transition md:hidden">
-                <div class="overflow-hidden rounded-lg bg-white shadow-md ring-1 ring-black ring-opacity-5">
-                  <div class="flex items-center justify-between px-5 pt-4">
-                    <div>
-                      <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
-                    </div>
-                    <div class="-mr-2">
-                      <button type="button" class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-                        <span class="sr-only">Close main menu</span>
-                        <!-- Heroicon name: outline/x-mark -->
-                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="space-y-1 px-2 pt-2 pb-3">
-                    <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900">Product</a>
-      
-                    <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900">Features</a>
-      
-                    <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900">Marketplace</a>
-      
-                    <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900">Company</a>
-                  </div>
-                  <a href="#" class="block w-full bg-gray-50 px-5 py-3 text-center font-medium text-indigo-600 hover:bg-gray-100">Log in</a>
-                </div>
-              </div>
-            </div>
-      
-            <main class="mx-auto mt-10 max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
-              <div class="sm:text-center lg:text-left">
-                <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
-                  <span class="block xl:inline">Data to enrich your</span>
-                  <span class="block text-indigo-600 xl:inline">online business</span>
-                </h1>
-                <p class="mt-3 text-base text-gray-500 sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg md:mt-5 md:text-xl lg:mx-0">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p>
-                <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                  <div class="rounded-md shadow">
-                    <a href="#" class="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 md:py-4 md:px-10 md:text-lg">Get started</a>
-                  </div>
-                  <div class="mt-3 sm:mt-0 sm:ml-3">
-                    <a href="#" class="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-100 px-8 py-3 text-base font-medium text-indigo-700 hover:bg-indigo-200 md:py-4 md:px-10 md:text-lg">Live demo</a>
-                  </div>
-                </div>
-              </div>
-            </main>
-          </div>
-        </div>
-        <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-          <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:h-full lg:w-full" src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80" alt="">
-        </div>
-      </div>
-    
-</body>
-</html>
+    <meta name="description" content="">
+    <meta name="author" content="">    
+    <link rel="shortcut icon" href="favicon.ico">  
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
+    <!-- FontAwesome JS-->
+	<script defer src="/landing-page/assets/fontawesome/js/all.min.js"></script>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="/landing-page/assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="/landing-page/assets/plugins/prism/prism.css">
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="/landing-page/assets/css/theme-3.css">
+    <!-- GitHub Button -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script> 
+</head> 
 
-<!-- 
-<main class="container">
-    <div class="row justify-content-around mt-5">
-        <a href="/login" class="col-3 btn btn-primary"> Login</a>
-        <a href="/signup" class="col-3 btn btn-primary"> Signup</a>
-    </div>
-</main>
-     -->
+<body data-spy="scroll">
+	
+    
+    <!-- ******HEADER****** --> 
+    <header id="header" class="header">                          
+        <nav id="main-nav" class="main-nav navbar navbar-expand-md">
+            <div class="container-fluid">
+            <a class="navbar-brand logo scrollto" href="#promo">
+                <span class="logo-title">idealHome</span>
+            </a>
+            
+            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-collapse"  aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button> -->
+                       
+            <!-- <div class="navbar-collapse collapse" id="navbar-collapse">
+                <ul id="nav-menu" class="nav navbar-nav ms-md-auto">
+                    <li class="nav-item sr-only"><a class="nav-link scrollto" href="#promo">Home</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#docs">Docs</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#license">License</a></li>                        
+                    <li class="nav-item last"><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                </ul>
+            </div> -->
+            </div>
+        </nav><!--//main-nav-->
+    </header><!--//header-->
+    
+    <!-- ******PROMO****** -->
+    <section id="promo" class="promo section offset-header">
+        <div class="container text-center">
+            <h2 class="title">ideal<span class="highlight">Home</span></h2>
+            <p class="intro">Find the best nursing home for your loved one.</p>
+            <div class="btns">
+                <a class="btn btn-cta-secondary" href="/login">Login</a>
+                <a class="btn btn-cta-primary" href="/signup">Signup</a>
+            </div>
+            
+        </div><!--//container-->
+       
+    </section><!--//promo-->
+    
+    <!-- ******ABOUT****** --> 
+    <section id="about" class="about section">
+        <div class="container">
+            <h2 class="title text-center">What is idealHome?</h2>
+            <p class="intro text-center">Explain your project in detail. 
+                Ipsum dolor sit amet, consectetur adipisicing elit, sed 
+                do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                 reprehenderit in voluptate.</p>
+      
+               
+        </div>
+    </section>
+    
+ 
+    
+    <!-- ******LICENSE****** --> 
+    <!-- <section id="license" class="license section">
+        <div class="container">
+            <div class="license-inner">
+            <h2 class="title text-center">License</h2>
+                <div class="info">
+                    <p>This Bootstrap theme is made by UX/UI designer <a href="https://twitter.com/3rdwave_themes" target="_blank">Xiaoying Riley</a> at 3rd Wave Media for developers and is <strong>100% FREE</strong> as long as you keep the footer attribution link.</p>
+                    <p><strong>[Tip for developers]:</strong> If your project is open source, you might want to put a <a href="https://www.paypal.com/us/cgi-bin/?cmd=_donate-intro-outside" target="_blank">PayPal "Donate" button</a> below so your users can express their gratitude. If your project is commercial, you can put a <a href="https://www.paypal.com/us/cgi-bin/webscr?cmd=_singleitem-intro-outside" target="_blank">PayPal "Buy Now" button</a> instead.</p>
+                </div>
+                <div class="cta-container">
+                    <div class="speech-bubble">                    
+                        <p class="intro">If you want to <strong>use this template without the footer attribution link</strong>, you can <a href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/devaid-free-bootstrap-theme-for-developers-side-projects/" target="_blank">buy the commercial license</a> via my website. Thank you for your support!</p>
+                        <div class="icon-holder  text-center"><i class="far fa-smile"></i></div>
+                    </div>
+                    <div class="btn-container  text-center">
+                        <a class="btn btn-cta-secondary" href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/devaid-free-bootstrap-theme-for-developers-side-projects/" target="_blank">Buy Commercial License</a>                   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+      
+    <!-- ******FOOTER****** --> 
+    <footer class="footer">
+        <div class="container text-center">
+            <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+            <small class="copyright">Designed with <span class="sr-only">love</span><i class="fas fa-heart"></i> by <a href="https://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+        </div><!--//container-->
+    </footer><!--//footer-->
+
+     
+    <!-- Javascript -->          
+    <script src="/landing-page/assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+    <script src="/landing-page/assets/plugins/prism/prism.js"></script>    
+    <script src="/landing-page/assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
+    <script src="/landing-page/assets/js/main.js"></script>  
+    
+        
+</body>
+</html> 
+
+
 
