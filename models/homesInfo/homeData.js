@@ -8,9 +8,12 @@ const bainbridge = new Home ({
     website: 'morningsidenrc.com'
 })
 
-bainbridge.save(function (error,document) {
-    if (error) console.error(error)
-    console.log(document)
+bainbridge.save((error) => {
+    if (error) {
+        console.log('an error has occured!')
+    }else {
+        console.log('your data has been saved!!!')
+    }
 })
 // const morningside = new Home ({
 //     name: 'Morningside Nursing & Rehabilitation',

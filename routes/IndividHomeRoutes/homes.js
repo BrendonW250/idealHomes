@@ -1,13 +1,12 @@
 const express = require("express");
 const router = express.Router();
-const nursingHomesController = require('../controllers/eachHome')
-// const authController = require("../controllers/auth");
-// const homeController = require("../controllers/home");
-// const postsController = require("../controllers/posts");
+const getSpecificController = require('../controllers/individualHomes')
 const { ensureAuth, ensureGuest } = require("../middleware/auth");
 
 // routes for the individual pages of nursing homes )
 router.get('/home', ensureAuth, nursingHomesController.getHomes)
+
+router.get('/individual', ensureAuth, getSpecificController.getMorningSide)
 
 
 //Main Routes - simplified for now

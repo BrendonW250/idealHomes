@@ -5,28 +5,24 @@ const Schema = mongoose.Schema
 const HomeSchema = new Schema({
     name: {
         type: String,
-        required: true,
-        unique: true
+        required: true
     },
     address: {
         type: String,
-        required: true,
-        unique: true
+        required: true
     },
     phoneNumber: {
         type: String,
-        required: true,
-        unique: true
+        required: true
     },
     website: {
         type: String,
-        required: true,
-        unique: true
-    },
-    user: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "User",
-      }
+        required: true
+    }
+    // user: {
+    //     type: mongoose.Schema.Types.ObjectId,
+    //     ref: "User",
+    //   }
 })
 
   module.exports = mongoose.model("Home", HomeSchema);
