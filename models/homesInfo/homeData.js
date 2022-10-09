@@ -1,20 +1,20 @@
-const Home = require('../models/Homes')
+// const Home = require('../models/Homes')
 
 
-const bainbridge = new Home ({
-    name: 'Morningside Nursing & Rehabilitation',
-    address: '1000 Pelham Parkway S, Bronx, NY 10461',
-    phoneNumber: '718-409-2800',
-    website: 'morningsidenrc.com'
-})
+// const bainbridge = new Home ({
+//     name: 'Morningside Nursing & Rehabilitation',
+//     address: '1000 Pelham Parkway S, Bronx, NY 10461',
+//     phoneNumber: '718-409-2800',
+//     website: 'morningsidenrc.com'
+// })
 
-bainbridge.save((error) => {
-    if (error) {
-        console.log('an error has occured!')
-    }else {
-        console.log('your data has been saved!!!')
-    }
-})
+// bainbridge.save((error) => {
+//     if (error) {
+//         console.log('an error has occured!')
+//     }else {
+//         console.log('your data has been saved!!!')
+//     }
+// })
 // const morningside = new Home ({
 //     name: 'Morningside Nursing & Rehabilitation',
 //     address: '100 Pelham Parkway S, Bronx, NY 10461',

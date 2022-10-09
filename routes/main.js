@@ -4,6 +4,7 @@ const authController = require("../controllers/auth");
 const homeController = require("../controllers/home");
 const postsController = require("../controllers/posts");
 const nursingHomesController = require('../controllers/eachHome')
+const morningController = require('../controllers/listOfHomes')
 const { ensureAuth, ensureGuest } = require("../middleware/auth");
 
 //Main Routes - simplified for now
@@ -16,5 +17,6 @@ router.get("/logout", authController.logout);
 router.get("/signup", authController.getSignup);
 router.post("/signup", authController.postSignup);
 router.get('/home', ensureAuth, nursingHomesController.getHomes)
+router.get('/morningside', ensureAuth, morningController.getMorningSide)
 
 module.exports = router;

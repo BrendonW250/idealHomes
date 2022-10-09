@@ -4,20 +4,18 @@ const Schema = mongoose.Schema
 
 const HomeSchema = new Schema({
     name: {
-        type: String,
-        required: true
+        type: String
     },
     address: {
-        type: String,
-        required: true
+        type: String
     },
     phoneNumber: {
-        type: String,
-        required: true
+        type: String
+        
     },
     website: {
-        type: String,
-        required: true
+        type: String
+        
     }
     // user: {
     //     type: mongoose.Schema.Types.ObjectId,
@@ -25,4 +23,4 @@ const HomeSchema = new Schema({
     //   }
 })
 
-  module.exports = mongoose.model("Home", HomeSchema);
+  module.exports = mongoose.model("nursinghomes", new Schema({name: String, address: String, phoneNumber: String, website: String}), 'nursinghomes');
