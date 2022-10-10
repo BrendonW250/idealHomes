@@ -4,26 +4,35 @@
 // this page will specify what to do with that kind of request
 // from the user
 
-const Homes = require('../models/Homes')
+const Finally = require('../models/Homes')
 
 module.exports = {
     getMorningSide: async (req, res) => {
-      console.log(req.user)
-      try{
+      // console.log(req.user)
+        Finally.find()
+        .then((result) => {
+          res.render('morningside.ejs', {names: result})
+        })
+        .catch(error => console.error(error))
+    }
+}
+        // res.render('morningside.ejs', {name: found})
         // look into the collection, and find the document that is associated
         // with Morningside Nursing home
-        const findMorning = await Homes.find({name: req.name})
+        // const home = req.body
+        // const foundHome = await Finally.find({ name: home})
+        // const findMorning = await HomeFormat.find({name: homeName})
+        // const findMorning = await Homes.find({name: req.name})
         // find the address associated with morningside
-        const findAddy = await Homes.find({address: req.address})
-        // find phoneNumber associated with morningside
-        const findPhone = await Homes.find({phoneNumber: req.phoneNumber})
-        // find website associated with morningside
-        const findWeb = await Homes.find({website: req.website})
+        // const findAddy = await Homes.find({address: req.address})
+        // // find phoneNumber associated with morningside
+        // const findPhone = await Homes.find({phoneNumber: req.phoneNumber})
+        // // find website associated with morningside
+        // const findWeb = await Homes.find({website: req.website})
         // render the information alongside the name of the nursing home
-        res.render('morningside.ejs', {name: findMorning, address: findAddy, phoneNumber: findPhone, website: findWeb })
-      }catch(err){
-        console.log(err)
-      }
+        
+        // res.render('morningside.ejs', {name: findMorning, address: findAddy, phoneNumber: findPhone, website: findWeb })
+      
       // let findHome = await Homes.find().toArray()
       // let res = await fetch(res.render('morningside.ejs'))
       // console.log(res)
@@ -34,8 +43,8 @@ module.exports = {
         // } catch (err) {
         //   console.log(err);
         // }
-      },
-}
+      
+
 
 // module.exports = {
 //     getMorningSide: async (req,res) => {

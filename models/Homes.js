@@ -21,6 +21,6 @@ const HomeSchema = new Schema({
     //     type: mongoose.Schema.Types.ObjectId,
     //     ref: "User",
     //   }
-})
+});
 
-  module.exports = mongoose.model("nursinghomes", new Schema({name: String, address: String, phoneNumber: String, website: String}), 'nursinghomes');
+module.exports = mongoose.model('Home', HomeSchema);
