@@ -4,18 +4,54 @@
 // this page will specify what to do with that kind of request
 // from the user
 
-const Finally = require('../models/Homes')
+const Dementia = require('../models/Homes')
 
 module.exports = {
     getMorningSide: async (req, res) => {
-      // console.log(req.user)
-        Finally.find()
-        .then((result) => {
-          res.render('morningside.ejs', {names: result})
-        })
-        .catch(error => console.error(error))
+      try {
+        const dementiaHomes = await Dementia.find()
+        res.render('morningside.ejs', {name: dementiaHomes})
+      }catch(err){
+        console.log(err)
+      }
     }
 }
+// function saveHome(home){
+//   const n = new Dementia(home)
+//   return n.save()
+// }
+
+// saveHome({
+//   name: "Morningside Nursing & Rehabilitation",
+//   address: '1000 Pelham Parkway S, Bronx, NY 10461',
+//   phoneNumber: '718-409-2800',
+//   website: 'morningsidenrc.com'
+// })
+//   .then(doc => {console.log(doc)})
+//   .catch(error => {console.error(error)})
+// const morningside = new Dementia({
+//   name: "Morningside Nursing & Rehabilitation",
+//   address: '1000 Pelham Parkway S, Bronx, NY 10461',
+//   phoneNumber: '718-409-2800',
+//   website: 'morningsidenrc.com'
+// })
+
+// // hopefully saving this object to the db
+// morningside.save(function(error, document) {
+//   if (error) console.error(error)
+//   console.log(document)
+// })
+
+// module.exports = {
+//     getMorningSide: async (req, res) => {
+//       // console.log(req.user)
+//         Finally.find()
+//         .then((result) => {
+//           res.render('morningside.ejs', {names: result})
+//         })
+//         .catch(error => console.error(error))
+//     }
+// }
         // res.render('morningside.ejs', {name: found})
         // look into the collection, and find the document that is associated
         // with Morningside Nursing home
