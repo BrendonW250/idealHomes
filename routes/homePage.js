@@ -8,9 +8,21 @@ const specificHomeController = require('../controllers/listOfHomes')
 const { ensureAuth, ensureGuest } = require("../middleware/auth");
 
 // routes for the individual pages of nursing homes )
-router.get('/home', ensureAuth, specificHomeController.getMorningSide)
+// router.get('/home', ensureAuth, specificHomeController.getMorningSide)
 
 router.get('/morningside', ensureAuth, specificHomeController.getMorningSide)
+router.get('/bainbridge', ensureAuth, specificHomeController.getBainbridge)
+router.get('/bethAbraham', ensureAuth, specificHomeController.getBeth)
+router.get('/kingsharbor', ensureAuth, specificHomeController.getKingsHarbor)
+router.get('/eastchesterrehab', ensureAuth, specificHomeController.getEastchester)
+router.get('/universitynursing', ensureAuth, specificHomeController.getUniversity)
+router.get('/stpatrickshome', ensureAuth, specificHomeController.getStPatrick)
+router.get('/williamsbridge', ensureAuth, specificHomeController.getWilliamsbridge)
+router.get('/grandmanor', ensureAuth, specificHomeController.getGrandManor)
+router.get('/splitrock', ensureAuth, specificHomeController.getSplitRock)
+router.get('/hudsonpointe', ensureAuth, specificHomeController.getHudson)
+router.get('/bronxcenter', ensureAuth, specificHomeController.getBronxCenter)
+
 
 
 //Main Routes - simplified for now

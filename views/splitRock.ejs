@@ -19,7 +19,7 @@
     
         <!-- Displaying the bainbridge home address -->
         <% for (let i=0; i<homes.length; i++){%>
-            <% if (homes[i].address == '3525 Baychester Ave., Bronx, NY 10466'){%>
+            <% if (homes[i].address == '3525 Baychester Ave, Bronx, NY 10466'){%>
                 <h2><%= homes[i].address %></h2>
             <%}%>
         <%}%>
@@ -39,5 +39,7 @@
                 
             <%}%>
         <%}%>
+
+        <button>Like</button>
 </body>
 </html>

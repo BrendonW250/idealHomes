@@ -4,30 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grand Manor Nursing & Rehabilitation</title>
+    <title>Hudson Pointe at Riverdale Center for Nursing & Rehabilitation</title>
 
-    <link rel="stylesheet" href="/assets/css/homeStyle.css">
 </head>
 <body>
 
-
      <!-- Displaying the name of the home for this specific page -->
      <% for (let i=0; i<homes.length; i++){%>
-        <% if (homes[i].name == 'Grand Manor Nursing & Rehabilitation'){%>
-            <h1 class="kings-heading"><%= homes[i].name %></h1>
+        <% if (homes[i].name == 'Hudson Pointe at Riverdale Center for Nursing & Rehabilitation'){%>
+            <h1 class="hudson-heading"><%= homes[i].name %></h1>
         <%}%>
     <%}%>
 
     <!-- Displaying the bainbridge home address -->
     <% for (let i=0; i<homes.length; i++){%>
-        <% if (homes[i].address == '700 White Plains Rd., Bronx, NY 10473'){%>
+        <% if (homes[i].address == '3220 Henry Hudson Parkway, Bronx, NY 10463'){%>
             <h2><%= homes[i].address %></h2>
         <%}%>
     <%}%>
 
     <!-- Displaying the nursing home's phone number -->
     <% for (let i=0; i<homes.length; i++){%>
-        <% if (homes[i].phoneNumber == '718-518-8892'){%>
+        <% if (homes[i].phoneNumber == '718-514-2000'){%>
             <h2><%= homes[i].phoneNumber %></h2>
         <%}%>
     <%}%>
@@ -35,11 +33,12 @@
 
     <!-- Displaying the nursing home's website -->
     <% for (let i=0; i<homes.length; i++){%>
-        <% if (homes[i].website == 'grandmanor.org'){%>
-            <a href="https://grandmanor.org">Website</a>
+        <% if (homes[i].website == 'citadelcarecenters.com/hudsonpointe/'){%>
+            <a href="https://citadelcarecenters.com/hudsonpointe/">Website</a>
             
         <%}%>
     <%}%>
-    <img src="" alt="photo-of-home">
+
+    <button>Like</button>
 </body>
 </html>
