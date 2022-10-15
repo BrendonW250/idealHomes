@@ -8,17 +8,14 @@ const HomeSchema = new mongoose.Schema({
         unique: true
     },
     address: {
-        type: String,
-        unique: true
+        type: String
     },
     phoneNumber: {
-        type: String,
-        unique: true
+        type: String
         
     },
     website: {
-        type: String,
-        unique: true
+        type: String
         
     }
     // user: {
@@ -27,21 +24,26 @@ const HomeSchema = new mongoose.Schema({
     //   }
 });
 
+module.exports = mongoose.model('Dementia', HomeSchema)
+
+// deleting any previous data in the collection
+// HomeSchema.deleteMany({});
+
 //creating the collection
-const collections = mongoose.model('Dementia', HomeSchema)
+// const collections = mongoose.model('Dementia', HomeSchema)
 
 // inserting a document into db
-collections.create({
-    name: 'Morningside Nursing & Rehabilitation',
-    address: '1000 Pelham Parkway S, Bronx, NY 10461',
-    phoneNumber: '718-409-2800',
-    website: 'morningsidenrc.com'
-})
-.then((ans) => {
-    console.log('document inserted')
-})
-.catch((err) => {
-    console.log(err)
-})
+// collections.create({
+//     name: 'Morningside Nursing & Rehabilitation',
+//     address: '1000 Pelham Parkway S, Bronx, NY 10461',
+//     phoneNumber: '718-409-2800',
+//     website: 'morningsidenrc.com'
+// })
+// .then((ans) => {
+//     console.log('document inserted')
+// })
+// .catch((err) => {
+//     console.log(err)
+// })
 
-module.exports = collections
+// module.exports = collections

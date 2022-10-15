@@ -8,12 +8,20 @@ const Dementia = require('../models/Homes')
 
 module.exports = {
     getMorningSide: async (req, res) => {
-      try {
-        const dementiaHomes = await Dementia.find()
-        res.render('morningside.ejs', {name: dementiaHomes})
-      }catch(err){
-        console.log(err)
-      }
+      Dementia.find({}, function(err,data) {
+        if (err){
+          console.log(err)
+        }else{
+          res.render('morningside.ejs', {homes: data})
+        }
+      })
+   
+      // const morning = Dementia.findOne({name: 'Morningside Nursing & Rehabilitation'})
+      // console.log(morning)
+          // .then(results => {
+          //   res.render('morningside.ejs', {homes: morning})
+          // })
+          // .catch(error => console.error(error))
     }
 }
 // function saveHome(home){

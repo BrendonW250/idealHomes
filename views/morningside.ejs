@@ -4,25 +4,73 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico">  
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
+    <!-- FontAwesome JS-->
+	<script defer src="/landing-page/assets/fontawesome/js/all.min.js"></script>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="/landing-page/assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="/landing-page/assets/plugins/prism/prism.css">
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="/landing-page/assets/css/theme-3.css">
     <title>Morningside Nursing & Rehabilitation</title>
 
     <!-- <link rel="stylesheet" href="/assets/css/homeStyle.css"> -->
 </head>
 <body>
 
-    <!-- Displaying the name of the home for this specific page -->
+      <!-- ******HEADER****** --> 
+      <header id="header" class="header">                          
+        <nav id="main-nav" class="main-nav navbar navbar-expand-md">
+            <div class="container-fluid">
+            <a class="navbar-brand logo scrollto" href="#promo">
+                <span class="logo-title">idealHome</span>
+            </a>
+            </div>
+        </nav><!--//main-nav-->
+    </header><!--//header-->
     
-    <% for (let i=0; i<names.length; i++){ %>
-        <% if (names[i] == 'Morningside Nursing & Rehabilitation'){ %>
-            <h1><% names[i] %></h1>
 
+    <!-- Displaying the name of the home for this specific page -->
+   
+    <% for (let i=0; i<homes.length; i++){ %>
+        <% if (homes[i].name == 'Morningside Nursing & Rehabilitation'){ %>
+            <h1><%= homes[i].name %></h1>
         <%}%>
     <%}%>
-       
+
+    <!-- Displaying the address for morningside -->
+    <% for (let i=0; i<homes.length; i++){ %>
+        <% if (homes[i].address == '1000 Pelham Parkway S, Bronx, NY 10461'){ %>
+            <h2><%= homes[i].address %></h2>
+        <%}%>
+    <%}%>
+
+    <!--  Displaying the phone number for morningside-->
+    <% for (let i=0; i<homes.length; i++){%>
+        <% if (homes[i].phoneNumber == '718-409-2800'){%>
+            <h2><%= homes[i].phoneNumber %></h2>
+        <%}%>
+    <%}%>
     
+    <!-- Displaying the website for morningside -->
+    <% for (let i=0; i<homes.length; i++){%>
+        <% if (homes[i].website == 'morningsidenrc.com'){%>
+            <a href="https://morningsidenrc.com">Website</a>
+        <%}%>
+    <%}%>
 
 
 
     <button type="submit">Like</button>
+
+    <!-- Javascript -->          
+    <script src="/landing-page/assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+    <script src="/landing-page/assets/plugins/prism/prism.js"></script>    
+    <script src="/landing-page/assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
+    <script src="/landing-page/assets/js/main.js"></script>  
+    
 </body>
 </html>
