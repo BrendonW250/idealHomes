@@ -5,6 +5,7 @@ const homeController = require("../controllers/home");
 const postsController = require("../controllers/posts");
 const specificHomeController = require('../controllers/listOfHomes');
 const nursingHomesController = require('../controllers/eachHome');
+const favoritesController = require('../controllers/eachHome')
 const { ensureAuth, ensureGuest } = require("../middleware/auth");
 
 //Main Routes - simplified for now
@@ -17,6 +18,7 @@ router.get("/logout", authController.logout);
 router.get("/signup", authController.getSignup);
 router.post("/signup", authController.postSignup);
 router.get('/home', ensureAuth, nursingHomesController.getHomes)
+router.post("/favorites", ensureAuth, favoritesController.getFavorites);
 
 
 router.get('/morningside', ensureAuth, specificHomeController.getMorningSide)
@@ -31,6 +33,8 @@ router.get('/grandmanor', ensureAuth, specificHomeController.getGrandManor)
 router.get('/splitrock', ensureAuth, specificHomeController.getSplitRock)
 router.get('/hudsonpointe', ensureAuth, specificHomeController.getHudson)
 router.get('/bronxcenter', ensureAuth, specificHomeController.getBronxCenter)
+
+
 
 
 module.exports = router;

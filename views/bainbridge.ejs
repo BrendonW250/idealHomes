@@ -40,6 +40,13 @@
             
         <%}%>
     <%}%>
+
+    <form
+          class="col-1"
+          action="/homes/savedHomes/<%= homes.id%>" method="POST"
+        >
+          <button class="btn btn-primary fa fa-star" type="submit"></button>
+        </form>
     
     <button>Like</button>
 

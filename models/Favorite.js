@@ -4,8 +4,8 @@ const mongoose = require('mongoose')
 // Only need the user and the name of the nursing home they liked
 const FavoriteSchema = new mongoose.Schema({
     name: {
-        type: String,
-        unique: true
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Home"
     },
     user: {
         type: mongoose.Schema.Types.ObjectId,
