@@ -5,6 +5,7 @@
 // from the user
 
 const Dementia = require('../models/Homes')
+const Favorite = require('../models/Favorite')
 
 module.exports = {
     getMorningSide: async (req, res) => {
@@ -125,7 +126,112 @@ module.exports = {
           res.render('williamsBridge.ejs', {homes: data})
         }
       })
+    },
+
+    getSavedHomes: async (req,res) => {
+      console.log(req.user)
+      try {
+      //Since we have a session each request (req) contains the logged-in users info: req.user
+      //console.log(req.user) to see everything
+      //Grabbing just the posts of the logged-in user
+        const homes = await Favorite.find({ user: req.user.id }).populate('favorites');
+
+        console.log(homes)
+
+      //Sending post data from mongodb and user data to ejs template
+       res.render("favorites.ejs", { nHomes: homes, user: req.user });
+      } catch (err) {
+        console.log(err);
+      }
+      // try {
+      //   const homes = await Dementia.find({ saves: req.user.id })
+      //   res.render('favorite.ejs', { homes: homes, user: req.user})
+      // }catch (err){
+      //   console.log(err)
+      },
+      // console.log(req.user)
+      // res.render('favorites.ejs')
+      // try{
+      //   const homes = await Favorite.find({ user: req.user.id }).populate('dementias')
+
+      //   console.log(homes)
+
+      //   //sending home data from mongodb and user data to ejs template
+      //   res.render('favorites.ejs')
+      // }catch(err){
+      //   console.log(err)
+      // }
+      // , {names: homes , user: req.user}
+    
+
+    saveHome: async (req, res) => {
+      try {
+        await Favorite.create({
+          user: req.user.id,
+          home: req.params.id
+        });
+
+        console.log('Saved home has been added!')
+        res.redirect(`/saveHome/${req.params.id}`)
+      }catch (err){
+        console.log(err)
+      }
+      
+      // let saved = false
+
+      // try {
+      //   let homes = await Dementia.findbyId({_id: req.params.id })
+      //   saved = (homes.saves.includes(req.user.id))
+      // }catch (err) {
+      // }
+
+      // if (saved) {
+      //   try {
+      //     await Dementia.findOneAndUpdate({_id:req.params.id}, 
+      //       {
+      //         $pull: {'saves': req.user.id}
+      //       })
+
+      //       console.log('Removed user from saved array')
+      //       res.redirect('/home')
+      //   }catch (err){
+      //     console.log(err)
+      //   }
+      // }
+      // // adds the user to the saves array created from the model
+      // else{
+      //   try{
+      //     await Dementia.findOneAndUpdate({ _id: req.params.id},
+      //       {
+      //         $addToSet: {'saves': req.user.id}
+      //       })
+
+      //         console.log('Added user to bookmarks array')
+      //         res.redirect('/home')
+      //   }catch (err){
+      //     console.log(err)
+      //   }
+      // }
     }
+  
+    // favoriteHome: async (req,res) => {
+    //   try {
+    //     let home = await Favorite.findbyId({_id: req.params.id})
+    //     favorited = (home.)
+    //   }
+    //   try {
+    //     await Favorite.create({
+    //       user: req.user.id, // getting the name of the logged in user
+    //       name: req.params.nameId, // getting the name of the nursing home
+    //       website: req.params.websiteId  
+    //     })
+    //     console.log("A home has been added to your favorites!")
+    //     console.log(req.params)
+    //     res.redirect(`/home`)
+    //   }catch (err){
+    //     console.log(err)
+    //   }
+    // }
 
 
 

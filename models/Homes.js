@@ -17,6 +17,9 @@ const HomeSchema = new mongoose.Schema({
     website: {
         type: String
         
+    },
+    saves: {
+        type: Array
     }
     // user: {
     //     type: mongoose.Schema.Types.ObjectId,

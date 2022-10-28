@@ -7,6 +7,10 @@ const FavoriteSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "Home"
     },
+    website: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Website"
+    },
     user: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "User",

@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const specificHomeController = require('../controllers/listOfHomes')
+// const savedController = require('../controllers/listOfHomes')
 // const morningController = require('../controller')
 // const authController = require("../controllers/auth");
 // const homeController = require("../controllers/home");
@@ -23,7 +24,14 @@ router.get('/splitrock', ensureAuth, specificHomeController.getSplitRock)
 router.get('/hudsonpointe', ensureAuth, specificHomeController.getHudson)
 router.get('/bronxcenter', ensureAuth, specificHomeController.getBronxCenter)
 
+router.post('/saveHome/:id', specificHomeController.saveHome)
 
+// router.post('/addFavorite', specificHomeController.favoriteHome)
+
+
+// route that connects each individual nursing home to the controller
+// that will post the appropriate nursing home in the favorites collection
+// router.post('/favoriteHome/:id', ensureAuth, savedController.favoriteHome)
 
 //Main Routes - simplified for now
 // router.get("/", homeController.getIndex);

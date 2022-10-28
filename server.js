@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const passport = require("passport");
+const bodyParser = require('body-parser')
 const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
 const methodOverride = require("method-override");
@@ -27,6 +28,8 @@ app.set("view engine", "ejs");
 
 //Static Folder
 app.use(express.static("public"));
+
+
 
 //Body Parsing
 app.use(express.urlencoded({ extended: true }));
@@ -59,7 +62,7 @@ app.use(flash());
 app.use("/", mainRoutes);
 app.use("/post", postRoutes);
 app.use('/homes', homeRoutes)
-app.use('/morningside', homeRoutes)
+// app.use('/morningside', homeRoutes)
 // app.use('/individual', individualRoutes)
 
 //Server Running

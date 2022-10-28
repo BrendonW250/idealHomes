@@ -42,14 +42,23 @@
     <%}%>
 
     <form
+            class="col justify-content-end"
+            action="/saveHome/<%= homes.id %>?_method=PUT"
+            method="POST"
+          >
+          <button type="submit">Save to Favorites</button>
+          
+    </form>
+    <!-- <form
           class="col-1"
-          action="/homes/savedHomes/<%= homes.id%>" method="POST"
+          action="/addFavorite/:nameId/:websiteId" method="POST"
         >
-          <button class="btn btn-primary fa fa-star" type="submit"></button>
-        </form>
-    
-    <button>Like</button>
+          <button class="btn btn-primary fa fa-star" type="submit">Add To Favorites</button>
+    </form>
+     -->
+    <!-- <button>Like</button> -->
 
+ 
     
 </body>
 </html>
