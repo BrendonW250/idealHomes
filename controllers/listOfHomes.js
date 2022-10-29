@@ -19,13 +19,19 @@ module.exports = {
     },
 
     getBainbridge: async (req, res) => {
-      Dementia.find({}, function(err,data) {
-        if (err){
-          console.log(err)
-        }else{
-          res.render('bainbridge.ejs', {homes: data})
-        }
-      })
+      try{
+        const home = await Dementia.findById(req.params.id)
+        res.render('bainbridge.ejs', { home: home, user: req.user})
+      }catch (err){
+        console.log(err)
+      }
+      // Dementia.find({}, function(err,data) {
+      //   if (err){
+      //     console.log(err)
+      //   }else{
+      //     res.render('bainbridge.ejs', {homes: data})
+      //   }
+      // })
     },
 
     getBeth: async (req, res) => {
@@ -172,7 +178,7 @@ module.exports = {
         });
 
         console.log('Saved home has been added!')
-        res.redirect(`/saveHome/${req.params.id}`)
+        res.redirect(`/saveHome/`)
       }catch (err){
         console.log(err)
       }

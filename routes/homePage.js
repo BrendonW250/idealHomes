@@ -24,6 +24,7 @@ router.get('/splitrock', ensureAuth, specificHomeController.getSplitRock)
 router.get('/hudsonpointe', ensureAuth, specificHomeController.getHudson)
 router.get('/bronxcenter', ensureAuth, specificHomeController.getBronxCenter)
 
+router.get('/:id', ensureAuth, specificHomeController.getSavedHomes)
 router.post('/saveHome/:id', specificHomeController.saveHome)
 
 // router.post('/addFavorite', specificHomeController.favoriteHome)
