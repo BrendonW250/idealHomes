@@ -10,7 +10,7 @@ const flash = require("express-flash");
 const logger = require("morgan");
 const connectDB = require("./config/database");
 const mainRoutes = require("./routes/main");
-const postRoutes = require("./routes/posts");
+const storyRoutes = require("./routes/stories");
 const homeRoutes = require('./routes/homePage')
 // const individualRoutes = require('./routes/IndividHomeRoutes/homes')
 
@@ -60,7 +60,7 @@ app.use(flash());
 
 //Setup Routes For Which The Server Is Listening
 app.use("/", mainRoutes);
-app.use("/post", postRoutes);
+app.use("/story", storyRoutes);
 app.use('/homes', homeRoutes)
 // app.use('/morningside', homeRoutes)
 // app.use('/individual', individualRoutes)
