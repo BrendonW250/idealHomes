@@ -12,6 +12,16 @@ module.exports = {
       console.log(err);
     }
   },
+  // creating a timeline of posts created by users in 
+  // chronological order
+  getFeed: async (req, res) => {
+    try {
+      const stories = await Story.find().sort({ createdAt: "desc" }).lean();
+      res.render("feed.ejs", { stories: stories });
+    } catch (err) {
+      console.log(err);
+    }
+  },
   // getting the homes that the user liked
   
   getStory: async (req, res) => {
@@ -22,16 +32,16 @@ module.exports = {
       console.log(err);
     }
   },
-  createPost: async (req, res) => {
+  createStory: async (req, res) => {
     try {
       await Story.create({
         story: req.body.story,
-        user: req.user.id
+        user: req.user.id,
         // title: req.body.title,
         // image: result.secure_url,
         // cloudinaryId: result.public_id,
         // caption: req.body.caption,
-        // likes: 0,
+        likes: 0
         
       });
       console.log("Story has been added!");
@@ -40,7 +50,7 @@ module.exports = {
       console.log(err);
     }
   },
-  likePost: async (req, res) => {
+  likeStory: async (req, res) => {
     try {
       await Story.findOneAndUpdate(
         { _id: req.params.id },
@@ -49,12 +59,12 @@ module.exports = {
         }
       );
       console.log("Likes +1");
-      res.redirect(`/post/${req.params.id}`);
+      res.redirect(`/story/${req.params.id}`);
     } catch (err) {
       console.log(err);
     }
   },
-  deletePost: async (req, res) => {
+  deleteStory: async (req, res) => {
     try {
       // Find post by id
       let post = await Story.findById({ _id: req.params.id });
