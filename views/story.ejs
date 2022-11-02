@@ -3,12 +3,12 @@
   <div class="row justify-content-center mt-5">
     <div class="col-6">
       <h2><%= user.userName %></h2>
-      <h2>Story: <% story.story %></h2>
+      <h2>Story: <%= story.story %></h2>
       <div class="row justify-content-between">
       
         <form
           class="col-1"
-          action="/story/likePost/<%= story.id %>?_method=PUT"
+          action="/story/likeStory/<%= story.id %>?_method=PUT"
           method="POST"
         >
           <button class="btn btn-primary fa fa-heart" type="submit"></button>
@@ -16,7 +16,7 @@
         <h3 class="col-3">Likes: <%= story.likes %></h3>
         <%if(story.user == user.id){ %>
         <form
-          action="/story/deletePost/<%= story.id %>?_method=DELETE"
+          action="/story/deleteStory/<%= story.id %>?_method=DELETE"
           method="POST"
           class="col-3"
         >
@@ -26,8 +26,8 @@
       </div>
     </div>
     <div class="col-6 mt-5">
-      <a class="btn btn-primary" href="/profile">Return to Profile</a>
-      <a class="btn btn-primary" href="/feed">Return to Feed</a>
+      <a class="btn btn-primary" href="/profile">Profile</a>
+      <a class="btn btn-primary" href="/feed">Feed</a>
     </div>
   </div>
 </div>

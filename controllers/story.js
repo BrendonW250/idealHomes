@@ -17,7 +17,7 @@ module.exports = {
   getFeed: async (req, res) => {
     try {
       const stories = await Story.find().sort({ createdAt: "desc" }).lean();
-      res.render("feed.ejs", { stories: stories });
+      res.render("feed.ejs", { stories: stories, user: req.user });
     } catch (err) {
       console.log(err);
     }
