@@ -5,7 +5,7 @@
 // from the user
 
 const Dementia = require('../models/Homes')
-// const Favorite = require('../models/Favorite')
+
 
 module.exports = {
     getMorningSide: async (req, res) => {

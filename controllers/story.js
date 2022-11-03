@@ -16,8 +16,15 @@ module.exports = {
   // chronological order
   getFeed: async (req, res) => {
     try {
-      const stories = await Story.find().sort({ createdAt: "desc" }).lean();
-      res.render("feed.ejs", { stories: stories, user: req.user });
+      // const feed = await Story.find({user: req.user.id}).populate('user')
+      const stories = await Story.find().populate('user').sort({ createdAt: "desc" }).lean();
+      
+
+      console.log(stories)
+
+      res.render("feed.ejs", { stories: stories});
+
+      
     } catch (err) {
       console.log(err);
     }

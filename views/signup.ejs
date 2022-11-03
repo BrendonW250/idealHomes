@@ -1,7 +1,25 @@
-<%- include('partials/header') -%>
-    <main class="container">
-        <div class="row justify-content-center">
-            <section class="col-6 mt-5">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>idealHomes</title>
+
+  <link rel="stylesheet" href="/css/signup.css">
+  <%- include('partials/header') -%>
+</head>
+<body>
+  
+
+  <section class="vh-100 gradient-custom">
+    <div class="container py-5 h-100">
+      <div class="row justify-content-center align-items-center h-100">
+        <div class="col-12 col-lg-9 col-xl-7">
+          <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+            <div class="card-body p-4 p-md-5">
+              <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Sign Up</h3>
+              <!-- <section class="col-6 mt-5"> -->
                 <% if (locals.messages.errors) { %>
                     <% messages.errors.forEach( el => { %>
                         <div class="alert alert-danger"><%= el.msg %></div>
@@ -32,8 +50,17 @@
                       </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                   </form>
-            </section>
+                </section>
+            </div>
+          </div>
         </div>
-    </main>
+      </div>
+    </div>
+  </section>
 
-<%- include('partials/footer') -%>
+  <%- include('partials/footer') -%>
+  
+</body>
+</html>
+
+
