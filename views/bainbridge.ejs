@@ -6,11 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bainbridge Nursing & Rehabilitation Center</title>
 
-    <!-- <link rel="stylesheet" href="/assets/css/main.css"> -->
+
+
+    <link rel="stylesheet" href="/css/main.css">
     
 </head>
 <body>
-    <!-- Displaying the name of the home for this specific page -->
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+            <h1>Generic Page</h1>
+            <span class="image main"><img src="images/pic13.jpg" alt="" /></span>
+            <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel venenatis mauris vehicula hendrerit.</p>
+            <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+        </div>
+    </div>
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+            <h1>Generic Page</h1>
+            <span class="image main"><img src="images/pic13.jpg" alt="" /></span>
+                <!-- Displaying the name of the home for this specific page -->
     <% for (let i=0; i<homes.length; i++){%>
         <% if (homes[i].name == 'Bainbridge Nursing & Rehabilitation Center'){%>
             <h1><%= homes[i].name %></h1>
@@ -39,19 +57,12 @@
             
         <%}%>
     <%}%>
+        </div>
+    </div>
+
+
   
 
-    <!-- <form
-          class="col-1"
-          action="/addFavorite/:nameId/:websiteId" method="POST"
-        >
-          <button class="btn btn-primary fa fa-star" type="submit">Add To Favorites</button>
-    </form>
-     -->
-    <!-- <button>Like</button> -->
-
- 
-    <!-- Create a feature where people can share their stories about the struggles of trying 
-    to find a nursing home where they live -->
+   
 </body>
 </html>
