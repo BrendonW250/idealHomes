@@ -1,58 +1,74 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Morningside Nursing & Rehabilitation</title>
+	<head>
+		<title>Generic - Phantom by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/css/main.css" />
+		<noscript><link rel="stylesheet" href="/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+        <%- include('partials/header') -%>
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-    <!-- <link rel="stylesheet" href="/assets/css/homeStyle.css"> -->
-</head>
-<body>
+		
 
-      <!-- ******HEADER****** --> 
-      <header id="header" class="header">                          
-        <nav id="main-nav" class="main-nav navbar navbar-expand-md">
-            <div class="container-fluid">
-            <a class="navbar-brand logo scrollto" href="#promo">
-                <span class="logo-title">idealHome</span>
-            </a>
-            </div>
-        </nav><!--//main-nav-->
-    </header><!--//header-->
-    
-
-    <!-- Displaying the name of the home for this specific page -->
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							 <!-- Displaying the name of the home for this specific page -->
    
-    <% for (let i=0; i<homes.length; i++){ %>
-        <% if (homes[i].name == 'Morningside Nursing & Rehabilitation'){ %>
-            <h1><%= homes[i].name %></h1>
-        <%}%>
-    <%}%>
+                                <% for (let i=0; i<homes.length; i++){ %>
+                                    <% if (homes[i].name == 'Morningside Nursing & Rehabilitation'){ %>
+                                        <h1><%= homes[i].name %></h1>
+                                    <%}%>
+                                <%}%>
 
-    <!-- Displaying the address for morningside -->
-    <% for (let i=0; i<homes.length; i++){ %>
-        <% if (homes[i].address == '1000 Pelham Parkway S, Bronx, NY 10461'){ %>
-            <h2><%= homes[i].address %></h2>
-        <%}%>
-    <%}%>
+                            <!-- Displaying the address for morningside -->
+                            <% for (let i=0; i<homes.length; i++){ %>
+                                <% if (homes[i].address == '1000 Pelham Parkway S, Bronx, NY 10461'){ %>
+                                    <h2>Address: <%= homes[i].address %></h2>
+                                <%}%>
+                            <%}%>
 
-    <!--  Displaying the phone number for morningside-->
-    <% for (let i=0; i<homes.length; i++){%>
-        <% if (homes[i].phoneNumber == '718-409-2800'){%>
-            <h2><%= homes[i].phoneNumber %></h2>
-        <%}%>
-    <%}%>
+                            <!--  Displaying the phone number for morningside-->
+                            <% for (let i=0; i<homes.length; i++){%>
+                                <% if (homes[i].phoneNumber == '718-409-2800'){%>
+                                    <h2>Contact: <%= homes[i].phoneNumber %></h2>
+                                <%}%>
+                            <%}%>
     
-    <!-- Displaying the website for morningside -->
-    <% for (let i=0; i<homes.length; i++){%>
-        <% if (homes[i].website == 'morningsidenrc.com'){%>
-            <a href="https://morningsidenrc.com">Website</a>
-        <%}%>
-    <%}%>
+                            <!-- Displaying the website for morningside -->
+                            <% for (let i=0; i<homes.length; i++){%>
+                                <% if (homes[i].website == 'morningsidenrc.com'){%>
+                                    <a href="https://morningsidenrc.com">Website</a>
+                                <%}%>
+                            <%}%>
+
+                            <div class="col-6 mt-5">
+                                <a class="btn btn-primary" href="/profile">Profile</a>
+                                <a class="btn btn-primary" href="/home">Home</a>
+                            </div>
+							
+						</div>
+					</div>
 
 
+			</div>
 
-    <button type="submit">Like</button>
-</body>
+            <%- include('partials/footer') -%>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
+
+
+
+

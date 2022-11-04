@@ -1,44 +1,72 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hudson Pointe at Riverdale Center for Nursing & Rehabilitation</title>
+	<head>
+		<title>Generic - Phantom by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/css/main.css" />
+		<noscript><link rel="stylesheet" href="/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+        <%- include('partials/header') -%>
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-</head>
-<body>
+		
 
-     <!-- Displaying the name of the home for this specific page -->
-     <% for (let i=0; i<homes.length; i++){%>
-        <% if (homes[i].name == 'Hudson Pointe at Riverdale Center for Nursing & Rehabilitation'){%>
-            <h1 class="hudson-heading"><%= homes[i].name %></h1>
-        <%}%>
-    <%}%>
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+						<!-- Displaying the name of the home for this specific page -->
+                        <% for (let i=0; i<homes.length; i++){%>
+                            <% if (homes[i].name == 'Hudson Pointe at Riverdale Center for Nursing & Rehabilitation'){%>
+                                <h1 class="hudson-heading"><%= homes[i].name %></h1>
+                            <%}%>
+                        <%}%>
 
-    <!-- Displaying the bainbridge home address -->
-    <% for (let i=0; i<homes.length; i++){%>
-        <% if (homes[i].address == '3220 Henry Hudson Parkway, Bronx, NY 10463'){%>
-            <h2><%= homes[i].address %></h2>
-        <%}%>
-    <%}%>
+                        <!-- Displaying the bainbridge home address -->
+                        <% for (let i=0; i<homes.length; i++){%>
+                            <% if (homes[i].address == '3220 Henry Hudson Parkway, Bronx, NY 10463'){%>
+                                <h2>Address: <%= homes[i].address %></h2>
+                            <%}%>
+                        <%}%>
 
-    <!-- Displaying the nursing home's phone number -->
-    <% for (let i=0; i<homes.length; i++){%>
-        <% if (homes[i].phoneNumber == '718-514-2000'){%>
-            <h2><%= homes[i].phoneNumber %></h2>
-        <%}%>
-    <%}%>
+                        <!-- Displaying the nursing home's phone number -->
+                        <% for (let i=0; i<homes.length; i++){%>
+                            <% if (homes[i].phoneNumber == '718-514-2000'){%>
+                                <h2>Contact: <%= homes[i].phoneNumber %></h2>
+                            <%}%>
+                        <%}%>
     
 
-    <!-- Displaying the nursing home's website -->
-    <% for (let i=0; i<homes.length; i++){%>
-        <% if (homes[i].website == 'citadelcarecenters.com/hudsonpointe/'){%>
-            <a href="https://citadelcarecenters.com/hudsonpointe/">Website</a>
+                        <!-- Displaying the nursing home's website -->
+                        <% for (let i=0; i<homes.length; i++){%>
+                            <% if (homes[i].website == 'citadelcarecenters.com/hudsonpointe/'){%>
+                                <a href="https://citadelcarecenters.com/hudsonpointe/">Website</a>
             
-        <%}%>
-    <%}%>
+                            <%}%>
+                        <%}%>
 
-    <button>Like</button>
-</body>
+
+                            <div class="col-6 mt-5">
+                                <a class="btn btn-primary" href="/profile">Profile</a>
+                                <a class="btn btn-primary" href="/home">Home</a>
+                            </div>
+							
+						</div>
+					</div>
+
+
+			</div>
+
+            <%- include('partials/footer') -%>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>

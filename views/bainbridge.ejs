@@ -1,68 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bainbridge Nursing & Rehabilitation Center</title>
+	<head>
+		<title>Generic - Phantom by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/css/main.css" />
+		<noscript><link rel="stylesheet" href="/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+        <%- include('partials/header') -%>
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+		
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Bainbridge Nursing & Rehabilitation Center</h1>
+							<!-- <span class="image main"><img src="images/pic13.jpg" alt="" /></span> -->
+                            <p>
+                            <!-- <% for (let i=0; i<homes.length; i++){%>
+                                <% if (homes[i].name == 'Bainbridge Nursing & Rehabilitation Center'){%>
+                                    <h1><%= homes[i].name %></h1>
+                                <%}%>
+                            <%}%> -->
+                            </p>
+                            <!-- Displaying the bainbridge home address -->
+                            <p>
+                            <% for (let i=0; i<homes.length; i++){%>
+                                <% if (homes[i].address == '3518 Bainbridge Ave, Bronx, NY 10467'){%>
+                                    <h2>Address: <%= homes[i].address %></h2>
+                                <%}%>
+                            <%}%>
+                            </p>
+                        
+                            <!-- Displaying the nursing home's phone number -->
+                            <p>
+                            <% for (let i=0; i<homes.length; i++){%>
+                                <% if (homes[i].phoneNumber == '718-655-1991'){%>
+                                    <h2>Contact: <%= homes[i].phoneNumber %></h2>
+                                <%}%>
+                            <%}%>
+                            </p>
+                            
+                        
+                            <!-- Displaying the nursing home's website -->
+                            <p>
+                            <% for (let i=0; i<homes.length; i++){%>
+                                <% if (homes[i].website == 'bainbridgecares.com'){%>
+                                    <a href="https://bainbridgecares.com">Website</a>
+                                    
+                                <%}%>
+                            <%}%>
+                            </p>
+
+                            <div class="col-6 mt-5">
+                                <a class="btn btn-primary" href="/profile">Profile</a>
+                                <a class="btn btn-primary" href="/home">Home</a>
+                            </div>
+							
+						</div>
+					</div>
 
 
+			</div>
 
-    <link rel="stylesheet" href="/css/main.css">
-    
-</head>
-<body>
+            <%- include('partials/footer') -%>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
 
-    <!-- Main -->
-    <div id="main">
-        <div class="inner">
-            <h1>Generic Page</h1>
-            <span class="image main"><img src="images/pic13.jpg" alt="" /></span>
-            <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel venenatis mauris vehicula hendrerit.</p>
-            <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
-        </div>
-    </div>
-    <!-- Main -->
-    <div id="main">
-        <div class="inner">
-            <h1>Generic Page</h1>
-            <span class="image main"><img src="images/pic13.jpg" alt="" /></span>
-                <!-- Displaying the name of the home for this specific page -->
-    <% for (let i=0; i<homes.length; i++){%>
-        <% if (homes[i].name == 'Bainbridge Nursing & Rehabilitation Center'){%>
-            <h1><%= homes[i].name %></h1>
-        <%}%>
-    <%}%>
+	</body>
+</html>
 
-    <!-- Displaying the bainbridge home address -->
-    <% for (let i=0; i<homes.length; i++){%>
-        <% if (homes[i].address == '3518 Bainbridge Ave, Bronx, NY 10467'){%>
-            <h2><%= homes[i].address %></h2>
-        <%}%>
-    <%}%>
 
-    <!-- Displaying the nursing home's phone number -->
-    <% for (let i=0; i<homes.length; i++){%>
-        <% if (homes[i].phoneNumber == '718-655-1991'){%>
-            <h2><%= homes[i].phoneNumber %></h2>
-        <%}%>
-    <%}%>
-    
-
-    <!-- Displaying the nursing home's website -->
-    <% for (let i=0; i<homes.length; i++){%>
-        <% if (homes[i].website == 'bainbridgecares.com'){%>
-            <a href="https://bainbridgecares.com">Website</a>
-            
-        <%}%>
-    <%}%>
-        </div>
-    </div>
 
 
   
 
-   
-</body>
-</html>

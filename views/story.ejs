@@ -7,22 +7,27 @@
       <div class="row justify-content-between">
       
         <form
-          class="col-1"
+          
           action="/story/likeStory/<%= story.id %>?_method=PUT"
           method="POST"
         >
           <button class="btn btn-primary fa fa-heart" type="submit"></button>
         </form>
-        <h3 class="col-3">Likes: <%= story.likes %></h3>
+        <h3 class=>Likes: <%= story.likes %></h3>
         <%if(story.user == user.id){ %>
         <form
           action="/story/deleteStory/<%= story.id %>?_method=DELETE"
           method="POST"
-          class="col-3"
+          
         >
           <button class="btn btn-primary fa fa-trash" type="submit"></button>
         </form>
         <%}%>
+
+        <div class="col-6 mt-5">
+          <a class="btn btn-primary" href="/profile">Profile</a>
+          <a class="btn btn-primary" href="/feed">Feed</a>
+        </div>
       </div>
     </div>
     <div class="col-6 mt-5">

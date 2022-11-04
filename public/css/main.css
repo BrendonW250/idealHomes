@@ -1734,7 +1734,7 @@ input, select, textarea {
 				}
 
 					.row > * {
-						padding: 0 0 0 1em;
+						padding: 10 0 0 1em;
 					}
 
 					.row.gtr-uniform {
@@ -1869,7 +1869,7 @@ input, select, textarea {
 
 	ol {
 		list-style: decimal;
-		margin: 0 0 2em 0;
+		margin: 0 0 3em 0;
 		padding-left: 1.25em;
 	}
 
