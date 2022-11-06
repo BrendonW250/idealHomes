@@ -14,7 +14,7 @@
 	</head>
 	<body class="is-preload">
 
-        <%- include('partials/header') -%>
+        
 		<!-- Wrapper -->
 			<div id="wrapper">
 
@@ -28,14 +28,26 @@
 								</a> -->
 
 							<!-- Nav -->
-								<!-- <nav>
+								<nav>
 									<ul>
 										<li><a href="#menu">Menu</a></li>
 									</ul>
-								</nav> -->
+								</nav>
+                        </div>
+                    </header>
+                            <!-- Menu -->
+					            <nav id="menu">
+						            <h2>Menu</h2>
+						                <ul>
+							                <li><a href="/home">Home</a></li>
+							                <li><a href="/profile">Profile</a></li>
+							                <li><a href="/feed">Shared Stories</a></li>
+                                            <li><a href="/logout">Logout</a></li>
+						                </ul>
+					            </nav>
 
-						</div>
-					</header>
+					
+                                <%- include('partials/header') -%>
 
 
 	<!-- Main -->
@@ -186,14 +198,14 @@
                     </a>
                 </article>
             </section>
-            <div class="col-6 mt-5">
+            <!-- <div class="col-6 mt-5">
                 <a class="btn btn-primary" href="/profile">Profile</a>
                 <a class="btn btn-primary" href="/feed">Shared Stories</a>
-            </div>
+            </div> -->
         </div>
     </div>
 
-    <%- include('partials/footer') -%>
+    <!-- <%- include('partials/footer') -%> -->
 
     <script src="/js/jquery.min.js"></script>
 	<script src="/js/browser.min.js"></script>

@@ -2831,10 +2831,10 @@ input, select, textarea {
 		}
 
 /* Header */
-
+/* 
 	#header {
-		padding: 8em 0 0.1em 0 ;
-	}
+		padding: 0em 0 0.1em 0 ;
+	} */
 
 		#header .logo {
 			display: block;
@@ -2951,9 +2951,9 @@ input, select, textarea {
 
 		@media screen and (max-width: 736px) {
 
-			#header {
-				padding: 4em 0 0.1em 0 ;
-			}
+			/* #header {
+				padding: 0em 0 0.1em 0 ;
+			} */
 
 				#header nav {
 					right: 0.5em;
