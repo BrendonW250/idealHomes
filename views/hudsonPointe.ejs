@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Generic - Phantom by HTML5 UP</title>
+		<title>idealHomes</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="/css/main.css" />
@@ -10,20 +10,55 @@
 	</head>
 	<body class="is-preload">
         <%- include('partials/header') -%>
+
+         <!-- Header-->
+         <header class="bg-dark py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder"><u>Hudson Pointe at Riverdale Center for Nursing & Rehabilitation</u></h1>
+                    <!-- <p class="lead fw-normal text-white-50 mb-0">Look at Other User's Stories</p> -->
+                </div>
+            </div>
+        </header>
+
 		<!-- Wrapper -->
 			<div id="wrapper">
 
 		
+            <!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+                        </div>
+                    </header>
+                            <!-- Menu -->
+					            <nav id="menu">
+						            <h2>Menu</h2>
+						                <ul>
+							                <li><a href="/home">Home</a></li>
+							                <li><a href="/profile">Profile</a></li>
+							                <li><a href="/feed">Shared Stories</a></li>
+                                            <li><a href="/logout">Logout</a></li>
+						                </ul>
+					            </nav>
 
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
 						<!-- Displaying the name of the home for this specific page -->
-                        <% for (let i=0; i<homes.length; i++){%>
+                        <p>
+                        <!-- <% for (let i=0; i<homes.length; i++){%>
                             <% if (homes[i].name == 'Hudson Pointe at Riverdale Center for Nursing & Rehabilitation'){%>
                                 <h1 class="hudson-heading"><%= homes[i].name %></h1>
                             <%}%>
-                        <%}%>
+                        <%}%> -->
+                        </p>
 
                         <!-- Displaying the bainbridge home address -->
                         <% for (let i=0; i<homes.length; i++){%>
@@ -49,10 +84,10 @@
                         <%}%>
 
 
-                            <div class="col-6 mt-5">
+                            <!-- <div class="col-6 mt-5">
                                 <a class="btn btn-primary" href="/profile">Profile</a>
                                 <a class="btn btn-primary" href="/home">Home</a>
-                            </div>
+                            </div> -->
 							
 						</div>
 					</div>

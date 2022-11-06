@@ -33,7 +33,9 @@ module.exports = {
   
   getStory: async (req, res) => {
     try {
-      const story = await Story.findById(req.params.id); //This is the method I would use to get the id of the home the user liked I THINK*****
+      const story = await Story.findById(req.params.id).populate('user'); //This is the method I would use to get the id of the home the user liked I THINK*****
+
+      console.log(story)
       res.render("story.ejs", { story: story, user: req.user });
     } catch (err) {
       console.log(err);

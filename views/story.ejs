@@ -1,38 +1,78 @@
 <%- include('partials/header') -%>
+
+<!-- Header -->
+<header id="header">
+  <div class="inner">
+
+   
+    <!-- Nav -->
+      <nav>
+        <ul>
+          <li><a href="#menu">Menu</a></li>
+        </ul>
+      </nav>
+              <!-- </div>
+          </header> -->
+                  <!-- Menu -->
+            <nav id="menu">
+              <h2>Menu</h2>
+                  <ul>
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/profile">Profile</a></li>
+                    <li><a href="/feed">Shared Stories</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                  </ul>
+            </nav>
+          </header>
+
+
+<!-- Header-->
+<header class="bg-dark py-5">
+  <div class="container px-4 px-lg-5 my-5">
+      <div class="text-center text-white">
+          <h1 class="display-4 fw-bolder"><%= story.user.userName %>'s Story</h1>
+         
+      </div>
+  </div>
+</header>
 <div class="container">
   <div class="row justify-content-center mt-5">
     <div class="col-6">
-      <h2><%= user.userName %></h2>
-      <h2>Story: <%= story.story %></h2>
+
+      <!-- Once user clicks on the view story hyperlink on the feed page
+      they will be sent to the page of that individual story  -->
+      <!-- This displays the story that that specific user made -->
+
+      <h2><%= story.story %></h2>
+
       <div class="row justify-content-between">
       
+        <!-- form that if a user likes the story will send that piece of data 
+        to the db and update the amount of likes the story has -->
         <form
-          
           action="/story/likeStory/<%= story.id %>?_method=PUT"
           method="POST"
+          class="col-3"
         >
           <button class="btn btn-primary fa fa-heart" type="submit"></button>
         </form>
-        <h3 class=>Likes: <%= story.likes %></h3>
-        <%if(story.user == user.id){ %>
+
         <form
           action="/story/deleteStory/<%= story.id %>?_method=DELETE"
           method="POST"
-          
+          class="col-3"
         >
           <button class="btn btn-primary fa fa-trash" type="submit"></button>
         </form>
+
+        <h3 class=>Likes: <%= story.likes %></h3>
+
+        <%if(story.user == user.id){ %>
+        
         <%}%>
 
-        <div class="col-6 mt-5">
-          <a class="btn btn-primary" href="/profile">Profile</a>
-          <a class="btn btn-primary" href="/feed">Feed</a>
-        </div>
+       
       </div>
-    </div>
-    <div class="col-6 mt-5">
-      <a class="btn btn-primary" href="/profile">Profile</a>
-      <a class="btn btn-primary" href="/feed">Feed</a>
     </div>
   </div>
 </div>
