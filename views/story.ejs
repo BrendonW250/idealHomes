@@ -46,30 +46,63 @@
       <h2><%= story.story %></h2>
 
       <div class="row justify-content-between">
+        
+        
       
         <!-- form that if a user likes the story will send that piece of data 
         to the db and update the amount of likes the story has -->
         <form
           action="/story/likeStory/<%= story.id %>?_method=PUT"
           method="POST"
-          class="col-3"
+          class="col-5"
+          
         >
+        <!-- <div class="col-5">
+          <button class="btn btn-danger form-control  btn-block" >Delete</button></div> -->
           <button class="btn btn-primary fa fa-heart" type="submit"></button>
+          <%if(story.user.userName == user.userName){ %>
+          <button form="delete-story" class="btn btn-danger fa fa-trash" type="submit"></button>
+          <%}%>
         </form>
 
+        <%if(story.user.userName == user.userName){ %>
         <form
           action="/story/deleteStory/<%= story.id %>?_method=DELETE"
           method="POST"
-          class="col-3"
+          class="col-5"
+          id="delete-story"
         >
-          <button class="btn btn-primary fa fa-trash" type="submit"></button>
+          <!-- <button class="btn btn-primary fa fa-trash" type="submit"></button> -->
         </form>
+        <%}%>
+
+        <!-- if the username tied to the story on the feed is the
+        same as the current logged in user the option to delete the story appears -->
+        <!-- <%if(story.user.userName == user.userName){ %> -->
+
+        <!-- <form
+        action="/story/deleteStory/<%= story.id %>?_method=DELETE"
+        method="POST" -->
+        
+        
+        >
+        <!-- <button id="butrash" class="btn btn-primary fa fa-trash" type="submit"></button> -->
+        <!-- <div class="col-5">
+          <button class="btn btn-danger form-control  btn-block" >Delete</button></div>
+        </form>
+        <%}%>
+        </div> -->
 
         <h3 class=>Likes: <%= story.likes %></h3>
 
-        <%if(story.user == user.id){ %>
-        
-        <%}%>
+        <!-- <div class="container">
+          <div class="row">
+            <div class="col">
+              <button class="btn btn-danger form-control  btn-block" routerLink=''>Cancel</button></div>
+            <div class="col">
+              <button id="btnSubmit" class="btn btn-primary form-control btn-block" type="submit" (click)="onSubmit()">Submit</button></div>
+          </div>
+        </div> -->
 
        
       </div>

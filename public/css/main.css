@@ -3334,11 +3334,7 @@ input, select, textarea {
 
 		}
 
-/* home page picture */
-.home-pic{
-	width: 100%;
-}
-
-#main > .inner > p{
-	padding-top: 50px;
+#bulike,
+#butrash{
+	display: inline-block;
 }
